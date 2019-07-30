@@ -3,23 +3,27 @@ package util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class FileUtil {
+    private static final Logger logger = LoggerFactory.getLogger(FileUtil.class);
     public static ArrayList<String> files = new ArrayList<String>();
 
-    private static final Logger logger = LoggerFactory.getLogger(FileUtil.class);
-
     public static void readAllFile(String filepath) {
-        File file= new File(filepath);
-        if(!file.isDirectory()){
-            if(file.getName().endsWith(".jpg")) {
+        File file = new File(filepath);
+        if (!file.isDirectory()) {
+            if (file.getName().endsWith(".jpg")) {
                 files.add(file.getPath());
             }
-        }else if(file.isDirectory()){
-            String[] filelist=file.list();
-            if(filelist!=null && filelist.length>0) {
+        } else if (file.isDirectory()) {
+            String[] filelist = file.list();
+            if (filelist != null && filelist.length > 0) {
                 for (int i = 0; i < filelist.length; i++) {
                     File readfile = new File(filepath);
                     if (!readfile.isDirectory()) {
@@ -38,7 +42,7 @@ public class FileUtil {
     }
 
 
-    public static void writeFile(String txt,String path) {
+    public static void writeFile(String txt, String path) {
         try {
             File writeName = new File(path); // 相对路径，如果没有则要建立一个新的output.txt文件
             writeName.createNewFile(); // 创建新文件,有同名的文件的话直接覆盖

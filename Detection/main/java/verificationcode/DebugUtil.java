@@ -1,16 +1,10 @@
 package verificationcode;
 
-import org.opencv.core.*;
+import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
-import org.opencv.imgproc.Imgproc;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
 
 /**
  * Created by jiangpeng on 2018/11/16.
@@ -66,7 +60,7 @@ public class DebugUtil {
             if (!debugSwitch) {
                 return;
             }
-            File file = new File(path.toString());//目录全路径
+            File file = new File(path);//目录全路径
             if (file.exists()) {
                 return;
             }

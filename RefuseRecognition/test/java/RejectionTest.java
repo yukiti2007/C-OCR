@@ -19,37 +19,34 @@ public class RejectionTest {
     @Test
     public void testReject() throws Exception {
         boolean isDebug = false;
-        String path =  this.getClass().getClassLoader().getResource("img/").getPath();  // "F:\\ocr\\reject\\ImgSmall\\";
-        path = path.substring(1, path.length());
+        String path = this.getClass().getClassLoader().getResource("img/").getPath();  // "F:\\ocr\\reject\\ImgSmall\\";
+        path = path.substring(1);
         File file = new File(path);
         String type = "png";
         String fn = "32";
         List<String> list;
-        if(isDebug){
+        if (isDebug) {
             list = new ArrayList<>();
-            list.add(fn+"."+type);
-        }else {
-            list = ReadTxtData.getFileNames(file, type,"","");
+            list.add(fn + "." + type);
+        } else {
+            list = ReadTxtData.getFileNames(file, type, "", "");
         }
-        if(list!= null && list.size()>0){
-            for(String str:list){
-                fn = str.substring(0,str.lastIndexOf("."));
+        if (list != null && list.size() > 0) {
+            for (String str : list) {
+                fn = str.substring(0, str.lastIndexOf("."));
                 Mat origin = Imgcodecs.imread(path + str);
                 int rejectFlag = 0;
                 try {
                     rejectFlag = RejectBiz.getRejectFlag(origin);
                 } catch (Exception e) {
-                   System.out.println("exception fn="+fn);
+                    System.out.println("exception fn=" + fn);
                 }
-                if(rejectFlag==0){
-                    System.out.println(fn+" rejectFlag="+rejectFlag);
+                if (rejectFlag == 0) {
+                    System.out.println(fn + " rejectFlag=" + rejectFlag);
                 }
             }
         }
     }
-
-
-
 
 
 }

@@ -1,9 +1,19 @@
 package verificationcode;
 
-import org.opencv.core.*;
+import org.opencv.core.Core;
+import org.opencv.core.Mat;
+import org.opencv.core.MatOfPoint;
+import org.opencv.core.MatOfPoint2f;
+import org.opencv.core.Point;
+import org.opencv.core.Rect;
+import org.opencv.core.RotatedRect;
+import org.opencv.core.Scalar;
+import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  * Created by jiangpeng on 2019/03/25.
@@ -47,7 +57,8 @@ public class VerficationCodeOCR {
 
     /**
      * 清除除字符外的其他噪声
-     * @param mat 验证码整图
+     *
+     * @param mat   验证码整图
      * @param codes 字符坐标
      * @return 清除噪声后的字符
      */
@@ -125,6 +136,7 @@ public class VerficationCodeOCR {
     /**
      * 获取字符的最小外接矩形
      * 在后处理比较时用到
+     *
      * @param code 字符二值图
      */
     private RotatedRect getRotatedRect(Mat code) {

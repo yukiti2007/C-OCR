@@ -7,9 +7,9 @@ import org.opencv.core.Mat;
  */
 public class BinaryProjectionEntity {
 
-    public int [] bwProjectionX;
+    public int[] bwProjectionX;
 
-    public int [] bwProjectionY;
+    public int[] bwProjectionY;
 
     public PointResultEntity pointResult;
 

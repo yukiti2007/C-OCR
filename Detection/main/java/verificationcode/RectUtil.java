@@ -3,7 +3,11 @@ package verificationcode;
 import org.opencv.core.Mat;
 import org.opencv.core.Rect;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by jiangpeng on 2018/11/19.

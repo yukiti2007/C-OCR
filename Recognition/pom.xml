@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>RefuseRecognition</artifactId>
-    <packaging>war</packaging>
+    <artifactId>Recognition</artifactId>
 
     <dependencies>
         <dependency>
@@ -31,5 +30,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

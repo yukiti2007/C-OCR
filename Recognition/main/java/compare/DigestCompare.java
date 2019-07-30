@@ -7,7 +7,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 
 /**
- *直方图比较
+ * 直方图比较
  */
 public class DigestCompare {
     public static int[] getData(String name) {

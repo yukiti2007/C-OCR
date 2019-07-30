@@ -4,7 +4,7 @@ import org.opencv.core.Mat;
 
 public class LaplaceEntity {
 
-    private  int [] hist;
+    private int[] hist;
 
     private Mat img;
 

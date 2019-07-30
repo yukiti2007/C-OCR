@@ -3,7 +3,10 @@
  */
 public class ENV {
 
-    public ENV(String key, String value){
+    private String _key;
+    private String _value;
+
+    public ENV(String key, String value) {
 
         _key = key;
 
@@ -19,8 +22,6 @@ public class ENV {
         this._key = _key;
     }
 
-    private String _key;
-
     public String get_value() {
         return _value;
     }
@@ -28,6 +29,4 @@ public class ENV {
     public void set_value(String _value) {
         this._value = _value;
     }
-
-    private  String _value;
 }

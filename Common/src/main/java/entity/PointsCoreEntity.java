@@ -60,26 +60,11 @@ public class PointsCoreEntity {
 
     private int maxAreaIndex;
 
-    public int getMaxAreaIndex() {
-        return maxAreaIndex;
+    public PointsCoreEntity() {
     }
-
-    public void setMaxAreaIndex(int maxAreaIndex) {
-        this.maxAreaIndex = maxAreaIndex;
-    }
-
-    public int getMaxArea() {
-        return maxArea;
-    }
-
-    public void setMaxArea(int maxArea) {
-        this.maxArea = maxArea;
-    }
-
-    public PointsCoreEntity(){}
 
     public PointsCoreEntity(int pointLen, int spaceCount, int maxDiff, int minDiff, double avgDiff, double avgSpaceDiff, int maxSpaceDiff, int minSpaceDiff, int badSpaceCount, double badSpaceSum, int xStart, int xEnd, double avgHeight, double yTopAvg, double yButtonAvg, int yStart, int yEnd,
-                            int goodWordCount, double sumWidth, double sumHeight, int minHeight, int maxHeight, int goodYTopMin, int goodYButtonMax, boolean isGood){
+                            int goodWordCount, double sumWidth, double sumHeight, int minHeight, int maxHeight, int goodYTopMin, int goodYButtonMax, boolean isGood) {
 
         this.pointLen = pointLen;
         this.spaceCount = spaceCount;
@@ -104,8 +89,24 @@ public class PointsCoreEntity {
         this.minHeight = minHeight;
         this.maxHeight = maxHeight;
         this.goodYTopMin = goodYTopMin;
-        this.goodYButtonMax  = goodYButtonMax;
+        this.goodYButtonMax = goodYButtonMax;
         this.isGood = isGood;
+    }
+
+    public int getMaxAreaIndex() {
+        return maxAreaIndex;
+    }
+
+    public void setMaxAreaIndex(int maxAreaIndex) {
+        this.maxAreaIndex = maxAreaIndex;
+    }
+
+    public int getMaxArea() {
+        return maxArea;
+    }
+
+    public void setMaxArea(int maxArea) {
+        this.maxArea = maxArea;
     }
 
     public int getPointLen() {

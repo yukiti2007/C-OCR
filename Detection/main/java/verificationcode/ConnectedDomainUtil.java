@@ -83,13 +83,14 @@ public class ConnectedDomainUtil {
 
     /**
      * 递归分析连通域
-     * @param mat 分析图
-     * @param i 待分析坐标
-     * @param j 待分析坐标
-     * @param res 当前连通域的值置为 res
+     *
+     * @param mat    分析图
+     * @param i      待分析坐标
+     * @param j      待分析坐标
+     * @param res    当前连通域的值置为 res
      * @param number 连通域累计像素点数
-     * @param endi 连通域边界
-     * @param endj 连通域边界
+     * @param endi   连通域边界
+     * @param endj   连通域边界
      */
     private void erase(Mat mat, int i, int j, double res, AtomicInteger number, AtomicInteger endi, AtomicInteger endj) {
         number.set(number.intValue() + 1); //计算连通域累计点数

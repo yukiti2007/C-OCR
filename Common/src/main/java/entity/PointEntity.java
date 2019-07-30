@@ -4,7 +4,7 @@ package entity;
 /**
  * Created by denghuang on 2018/7/4.
  */
-public  class PointEntity {
+public class PointEntity {
 
 
     private int xLeft;
@@ -28,20 +28,13 @@ public  class PointEntity {
     private boolean isSpaceText;
 
     private String doubtWord;
+    private int id;
 
-    public String getDoubtWord() {
-        return doubtWord;
-    }
-
-    public void setDoubtWord(String doubtWord) {
-        this.doubtWord = doubtWord;
-    }
-
-    public PointEntity(){
+    public PointEntity() {
 
     }
 
-    public PointEntity(int xLeft, int yTop, int xRight, int yButton, int width, int height, double whRadio){
+    public PointEntity(int xLeft, int yTop, int xRight, int yButton, int width, int height, double whRadio) {
         this.xLeft = xLeft;
         this.yTop = yTop;
         this.xRight = xRight;
@@ -51,6 +44,14 @@ public  class PointEntity {
         this.whRadio = whRadio;
     }
 
+    public String getDoubtWord() {
+        return doubtWord;
+    }
+
+    public void setDoubtWord(String doubtWord) {
+        this.doubtWord = doubtWord;
+    }
+
     public double getWhRadio() {
         return whRadio;
     }
@@ -58,8 +59,6 @@ public  class PointEntity {
     public void setWhRadio(double whRadio) {
         this.whRadio = whRadio;
     }
-
-    private int id;
 
     public int getId() {
         return id;

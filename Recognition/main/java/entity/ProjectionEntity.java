@@ -1,19 +1,18 @@
 package entity;
 
 public class ProjectionEntity {
-    public ProjectionEntity(Integer index,Integer index1, Integer index2, Double num, Double signNum) {
+    private Integer index;
+    private Integer index1;
+    private Integer index2;
+    private Double num;
+    private Double signNum;
+    public ProjectionEntity(Integer index, Integer index1, Integer index2, Double num, Double signNum) {
         this.index = index;
         this.index1 = index1;
         this.index2 = index2;
         this.num = num;
         this.signNum = signNum;
     }
-
-    private Integer index;
-    private Integer index1;
-    private Integer index2;
-    private Double num;
-    private Double signNum;
 
     public Integer getIndex() {
         return index;

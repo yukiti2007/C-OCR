@@ -2,22 +2,19 @@ package entity;
 
 public class CoreParameterEntity {
 
+    double d_energy;
     // 熵
-    private  double en;
+    private double en;
     // 二值化均方差
-    private  double std;
+    private double std;
     // laplace 均方差
     private double l_std;
     // 二值化占比
     private double bw_radio;
     // 灰度峰值
     private double hist_peak;
-
     private double g_max;
-
     private double d_brenner;
-
-    double d_energy;
     // 均值
     private double avg;
     // 像素总和

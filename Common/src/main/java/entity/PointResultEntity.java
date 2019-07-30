@@ -22,5 +22,4 @@ public class PointResultEntity {
     public String doubtWord;
 
 
-
 }
